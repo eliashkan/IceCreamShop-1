@@ -7,6 +7,7 @@ import be.intecbrussel.sellers.PriceList;
 public class IceCreamApp {
     public static void main(String[] args) {
         PriceList priceList = new PriceList(3.95, 4.95, 5.95);
+        // Salon moest in een seller referentie variabele stond in de opgave.
         IceCreamSalon iceCreamSalon = new IceCreamSalon(priceList);
 
         IceRocket iceRocket = iceCreamSalon.orderIceRocket();
