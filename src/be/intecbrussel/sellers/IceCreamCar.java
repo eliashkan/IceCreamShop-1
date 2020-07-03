@@ -15,6 +15,11 @@ public class IceCreamCar implements IceCreamSeller {
 
     @Override
     public Cone orderCone(Flavor[] flavor) {
+        
+        // Meestal is het logischer om de methode de exception te laten throwen en ze op te vangen en handlen waar de methode wordt opgeroepen.
+        // Is in dit geval misschien minder duidelijk omdat we slechts sysouts naar de console sturen.
+        // Voorbeeld van loose coupling: zoals je het hier doet zal je voor altijd vast zitten aan één manier om deze exception op te lossen. 
+        // Als je hem verdergooit kan de caller ermee doen wat hij wil.
         try {
             if (stock.getBalls() < flavor.length) {
                 throw new NoMoreIceCreamException("No more balls");
